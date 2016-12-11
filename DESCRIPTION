@@ -1,8 +1,8 @@
 Package: fdq
 Type: Package
 Title: Forest Data Quality
-Date: 2016-11-12
-Version: 0.1
+Date: 2016-12-11
+Version: 0.2
 Authors@R: c(person("Caíque", "de Oliveira de Souza", 
            email = "forestdataqualitysoftware@gmail.com", role = c("aut", "cre")),
            person("Clayton", "Vieira Fraga Filho", 
@@ -18,13 +18,13 @@ Description: Contains methods of analysis of forest databases, the purpose of th
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: R(>= 3.0), Fgmutils
-Imports: data.table, sqldf, randomcoloR, ggplot2, plyr, utils, stats
+Depends: R(>= 3.0), Fgmutils,data.table
+Imports: ggplot2, sqldf, randomcoloR, plyr, utils, stats
 RoxygenNote: 5.0.1
 NeedsCompilation: no
-Packaged: 2016-11-12 16:18:43 UTC; caique
+Packaged: 2016-12-11 17:43:49 UTC; caique
 Author: Caíque de Oliveira de Souza [aut, cre],
   Clayton Vieira Fraga Filho [ctb, dtc],
   Miquéias Fernandes [ctb]
 Repository: CRAN
-Date/Publication: 2016-11-12 19:55:00
+Date/Publication: 2016-12-11 20:35:12

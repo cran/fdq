@@ -8,24 +8,29 @@
 #' @param data_base data.frame data.table or any database
 #' @param state string field name representing state column in database
 #' @param measurement_variables string vector that contains a set of measurement variables to be analyzed, this variables are names of columns in database
-#' @import data.table
+#' @import sqldf
 #' @export
 check_dead_state = function(data_base,state,measurement_variables){
-	result = NULL
-	if(state %in% names(data_base)){
-		paired_database = as.data.table(data_base)
-		state_m = paired_database[eval(parse(text=state))=='m' | eval(parse(text=state))=='M', ]
-		for (variable in measurement_variables) {
-			if(variable %in% names(state_m)){
-				result = rbind(result,state_m[eval(parse(text=variable))!=0 | is.na(eval(parse(text=variable)))==FALSE, ])
+	if(check_variables(data_base,state)){
+		if(check_variables(data_base,measurement_variables)){
+				state_dead = sqldf(paste("SELECT * FROM",deparse(substitute(data_base)),"WHERE",state,"= 'm' OR",state,"= 'M' "))
+				query = "SELECT * FROM state_dead WHERE"
+				for (i in measurement_variables) {
+					if(i == measurement_variables[length(measurement_variables)]){
+      					query = paste(query,i)
+   					}
+    				else{
+      					query = paste(query,i,"OR")
+    				}
+				}
+				query = paste(query,"NOT IN (0)")
+				return(as.data.frame(sqldf(query)))
 			}
-			else{
-				paste(variable,"not found in database!")
-			}
+		else{
+			find_missing_variable(data_base,measurement_variables)
 		}
-		return(as.data.frame(result))
 	}
 	else{
-		paste(state,"not found in the database")
+		find_missing_variable(data_base,state)
 	}
 }
