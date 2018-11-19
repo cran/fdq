@@ -14,4 +14,3 @@ find_missing_variable(data_base, variables)
 \description{
 This function identifies non-existent column names in the database and informs the user
 }
-

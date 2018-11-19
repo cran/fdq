@@ -12,4 +12,3 @@ generate_new_color(colors)
 \description{
 This function generates a new random color without repeating the ones that were entered in the last field as parameter
 }
-

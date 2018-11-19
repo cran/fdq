@@ -16,4 +16,3 @@ check_dead_state(data_base, state, measurement_variables)
 \description{
 This function checks if the base state field is equal to dead (M) and there is some kind of measurement
 }
-

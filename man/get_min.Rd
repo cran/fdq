@@ -14,4 +14,3 @@ get_min(database, variables)
 \description{
 This function returns the minimum value of one or more fields of measurement variables
 }
-

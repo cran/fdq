@@ -16,4 +16,3 @@ check_existing_place(database, place_name, places_to_check)
 \description{
 This function checks whether a particular set of sites or locations exists in a database column
 }
-

@@ -16,4 +16,3 @@ generate_initial_diameter_class(database, plot_name, age_name)
 \description{
 This function generates the initial class field to aid in the process of diametric increasing
 }
-

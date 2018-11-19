@@ -21,4 +21,3 @@ check_parcel_different_spacing(database, parcel_name, spacing_age1,
 \description{
 This function checks for partitions with different spacing at i and i + 1 ages, it is necessary that the base be paired including the field representing the spacing, doubts about how to pair its base see the Fgmutils package
 }
-

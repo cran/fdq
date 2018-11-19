@@ -12,19 +12,19 @@
 #' @param rounded_age1 string name of column rounde age one
 #' @param rounded_age2 string name of column rounde age two
 #' @param months TRUE for age in months or FALSE for age in years
-#' @import sqldf
+#' @import data.table
 #' @export
 check_ages = function(data_base,rounded_age1,rounded_age2,months = FALSE){
 	if((rounded_age1 %in% names(data_base))){
 		if(rounded_age2 %in% names(data_base)){
 			if(months == TRUE){
-				query = paste("SELECT * FROM",deparse(substitute(data_base)),"WHERE",rounded_age2,"-",rounded_age1,"<> 12")
-				result = sqldf(query)
+				paired_database = as.data.table(data_base)
+				result = paired_database[((eval(parse(text=rounded_age2))-eval(parse(text=rounded_age1)))!=12), ]
 				return (as.data.frame(result))
 			}
 			else{
-				query = paste("SELECT * FROM",deparse(substitute(data_base)),"WHERE",rounded_age2,"-",rounded_age1,"<> 1")
-				result = sqldf(query)
+				paired_database = as.data.table(data_base)
+				result = paired_database[((eval(parse(text=rounded_age2))-eval(parse(text=rounded_age1)))!=1), ]
 				return (as.data.frame(result))
 			}
 

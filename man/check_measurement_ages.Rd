@@ -4,7 +4,8 @@
 \alias{check_measurement_ages}
 \title{check_measurement_ages}
 \usage{
-check_measurement_ages(data_base, measurement_variable1, measurement_variable2)
+check_measurement_ages(data_base, measurement_variable1,
+  measurement_variable2)
 }
 \arguments{
 \item{data_base}{data.frame, data.table or any database}
@@ -16,4 +17,3 @@ check_measurement_ages(data_base, measurement_variable1, measurement_variable2)
 \description{
 This function verifies if measurement variables have records of type DAP2 <DAP1, HT2 <HT1 in consecutive ages i + 1 and i tt is necessary that the base is already paired to perform such analysis, to know more about pairing consult the Fgmutils package
 }
-

@@ -16,4 +16,3 @@ check_measurements_state(data_base, measurement_variables, state)
 \description{
 This function checks if there is a measurement variable with value equal to 0 and if the respective states are different from M, F, A
 }
-

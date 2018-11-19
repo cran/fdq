@@ -16,4 +16,3 @@ check_existing_plots(database, plots_name, plots_to_check)
 \description{
 This function checks if a particular set of parcels exists in a database column
 }
-

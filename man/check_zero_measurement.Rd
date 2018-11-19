@@ -19,4 +19,3 @@ check_zero_measurement(data_base, measurement_variables, state_name,
 \description{
 This analysis verifies which measurement variables have values equal to 0 and then checks if there are variables in the states that the user reported
 }
-

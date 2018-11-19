@@ -16,4 +16,3 @@ find_missing_age(database, age_name, ages_to_check)
 \description{
 This function identifies the missing age values in the database and notifies them to the user.
 }
-

@@ -14,4 +14,3 @@ get_max(database, variables)
 \description{
 This function returns the maximum value of one or more fields of measurement variables
 }
-

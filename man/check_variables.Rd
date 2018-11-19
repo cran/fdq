@@ -21,4 +21,3 @@ This function checks if the entered column exists within the base
 test <- data.frame("tree","diametrer","N")
 check_variables(test,c("tree","diameter"))
 }
-

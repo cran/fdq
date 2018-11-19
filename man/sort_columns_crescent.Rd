@@ -14,4 +14,3 @@ sort_columns_crescent(database, column)
 \description{
 Sorts the database incrementally based on the selected column
 }
-

@@ -14,4 +14,3 @@ check_undefined_spacing(data_base, spacings)
 \description{
 This function checks if there is any record with undefined spacing (0 or NA)
 }
-

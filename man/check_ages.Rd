@@ -18,4 +18,3 @@ check_ages(data_base, rounded_age1, rounded_age2, months = FALSE)
 \description{
 This analysis verifies age differences on a paired basis, if the rounded ages are in months the check is if the difference is 12 months, if it is in year the consecutive ages should only present difference of 1 year, doubts about how to pair your base consult The Fgmutils package
 }
-

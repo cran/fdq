@@ -16,4 +16,3 @@ find_missing_place(database, place_name, places_to_check)
 \description{
 This function identifies values of sites or locations in the database and notifies them to the user
 }
-

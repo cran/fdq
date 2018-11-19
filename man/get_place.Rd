@@ -16,4 +16,3 @@ get_place(database, place_name, place_value)
 \description{
 This function returns a database from a particular site or location present in the original database
 }
-

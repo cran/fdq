@@ -16,4 +16,3 @@ check_existing_ages(database, ages_name, ages_to_check)
 \description{
 This function checks if a given set of ages exists in a database column
 }
-

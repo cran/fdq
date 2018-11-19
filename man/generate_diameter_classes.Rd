@@ -19,4 +19,3 @@ generate_diameter_classes(database, diameter_names, amplitude,
 \description{
 This function identifies non-existent column names in the database and informs the user
 }
-

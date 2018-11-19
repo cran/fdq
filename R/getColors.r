@@ -3,14 +3,14 @@
 #Parametros: base de dados(database), nome da coluna que contém as classes de diametro (diameter_classe_name)
 #Exemplo de chamada: generate_colors_dap_class(database,"classedediametro")
 
-#' @title generate_colors_diameter_class
+#' @title getColors
 #' @description This function generates a new random color for each diameter class in the base
 #' @param database data.frame, data.table or any database
 #' @param diameter_classe_name string with the name of field (column) containing the diameter classes
 #' @import data.table
 #' @import randomcoloR
 #' @export
-generate_colors_diameter_class <- function(database,diameter_classe_name){
+getColors <- function(database,diameter_classe_name){
   if(check_variables(database,diameter_classe_name)){
     data = as.data.table(database)
     diameter_classes = unique(database[,diameter_classe_name])

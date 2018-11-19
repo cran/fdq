@@ -18,4 +18,3 @@ generate_number_hectare(database, area_name, n_name, nha_name = "NHa")
 \description{
 This function generates the NHa, field that represents the number of surviving trees per hectare
 }
-

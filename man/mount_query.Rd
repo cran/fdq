@@ -18,4 +18,3 @@ mount_query(database, select_names, group_names, option)
 \description{
 This auxiliary function checks that need to group fields of certain measurements
 }
-

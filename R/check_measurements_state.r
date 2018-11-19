@@ -11,22 +11,21 @@
 #' @import data.table
 #' @export
 check_measurements_state = function(data_base,measurement_variables,state){
-  aux_measurement = NULL
-  if(check_variables(data_base,measurement_variables)){
-    if(check_variables(data_base,state)){
-      paired_database = as.data.table(data_base)
-      for (variable in measurement_variables) {
-        aux_measurement = rbind(aux_measurement,paired_database[eval(parse(text=variable))==0, ])
-      }
-      aux_state = aux_measurement[eval(parse(text=state))!="",]
-      aux_state = aux_state[eval(parse(text=state))!= 'M' & eval(parse(text=state))!='F' & eval(parse(text=state))!='A', ]
-      return(as.data.frame(aux_state))
-    }
-    else{
-      find_missing_variable(data_base,state)
-    }
-  }
-  else{
-    find_missing_variable(data_base,measurement_variables)
-  }
+	aux_measurement = NULL
+	if(check_variables(data_base,measurement_variables)){
+		if(check_variables(data_base,state)){
+			paired_database = as.data.table(data_base)
+			for (variable in measurement_variables) {
+				aux_measurement = rbind(aux_measurement,paired_database[eval(parse(text=variable))==0, ])
+			}
+			aux_state = aux_measurement[eval(parse(text=state))!= 'M' & eval(parse(text=state))!='F' & eval(parse(text=state))!='A', ]
+			return(as.data.frame(aux_state))
+		}
+		else{
+			find_missing_variable(data_base,state)
+		}
+	}
+	else{
+		find_missing_variable(data_base,measurement_variables)
+	}
 }

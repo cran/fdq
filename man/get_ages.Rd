@@ -16,4 +16,3 @@ get_ages(database, age_name, age_values)
 \description{
 This function concatenates age values in a string for a query and returns the same
 }
-
